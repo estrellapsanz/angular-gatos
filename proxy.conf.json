@@ -1,0 +1,12 @@
+{
+  "/api": {
+      "target": "https://thecatapi.com/v1/images",
+      "secure": true,
+      "changeOrigin": true,
+      "pathRewrite": {
+        "^/api": ""
+      }
+    }
+  }
+
+  
