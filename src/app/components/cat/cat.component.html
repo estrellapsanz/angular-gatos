@@ -22,7 +22,7 @@
   </div>
 </div>-->
 
-<div class="container mt-5" [@fadeInOut]>
+<div class="container mt-5">
   <div fxLayout="row wrap" fxLayoutGap="16px grid">
     <div *ngIf="cat" class="">
       <mat-card class="mat-elevation-4">
@@ -44,17 +44,61 @@
           ><p>{{ cat.breeds[0].description }}</p></mat-card-content
         >
 
-        <!--<mat-card-actions>
-        <button mat-button>Like</button>
-        <button mat-button>Share</button>
-      </mat-card-actions>-->
+        <mat-tab-group *ngIf="showDetails">
+          <mat-tab label="Temperament">
+            {{ cat.breeds[0].temperament }}
+          </mat-tab>
+          <mat-tab label="Affection level">
+            {{ cat.breeds[0].affection_level }}</mat-tab
+          >
+          <mat-tab label="Urls">
+            <ul>
+              <li><a href="{{ cat.breeds[0].wikipedia_url }}">Wikipedia</a></li>
+              <li><a href="{{ cat.breeds[0].vetstreet_url }}">Vetstreet</a></li>
+            </ul>
+          </mat-tab>
+          <mat-tab label="Child friendly">
+            {{ cat.breeds[0].child_friendly }}
+          </mat-tab>
+          <mat-tab label="Dog friendly">
+            {{ cat.breeds[0].dog_friendly }}
+          </mat-tab>
+          <mat-tab label="Energy level">
+            {{ cat.breeds[0].energy_level }}
+          </mat-tab>
+        </mat-tab-group>
+
+        <mat-tab-group *ngIf="showDetails">
+          <mat-tab label="Grooming">
+            {{ cat.breeds[0].grooming }}
+          </mat-tab>
+          <mat-tab label="Hairless"> {{ cat.breeds[0].hairless }}</mat-tab>
+          <mat-tab label="Health issues">
+            {{ cat.breeds[0].health_issues }}
+          </mat-tab>
+          <mat-tab label="Hypoallergenic">
+            {{ cat.breeds[0].hypoallergenic }}
+          </mat-tab>
+          <mat-tab label="Indoor">
+            {{ cat.breeds[0].indoor }}
+          </mat-tab>
+          <mat-tab label="Intelligence">
+            {{ cat.breeds[0].intelligence }}
+          </mat-tab>
+        </mat-tab-group>
+        
       </mat-card>
 
       <div class="buttons" fxLayout="row wrap">
         <a routerLink="/">
           <button mat-raised-button color="accent" type="button">Back</button>
         </a>
-        <button mat-raised-button color="primary" type="button">
+        <button
+          (click)="toggleShow()"
+          mat-raised-button
+          color="primary"
+          type="button"
+        >
           Show details
         </button>
       </div>

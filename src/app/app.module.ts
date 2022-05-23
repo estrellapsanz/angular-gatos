@@ -4,6 +4,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { MatTabsModule } from '@angular/material/tabs';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ServiceWorkerModule } from '@angular/service-worker';
@@ -19,6 +20,7 @@ import { CatsComponent } from './components/cats/cats.component';
     HttpClientModule,
     FlexLayoutModule,
     MatCardModule,
+    MatTabsModule,
     BrowserModule,
     AppRoutingModule,
     MatButtonModule,

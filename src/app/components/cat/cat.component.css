@@ -14,3 +14,7 @@ mat-card {
 button {
   margin-left: 2%;
 }
+
+mat-tab-group {
+  margin-top: 4%;
+}

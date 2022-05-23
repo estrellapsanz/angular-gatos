@@ -10,6 +10,7 @@ import { CatsService } from 'src/app/services/cats.service';
 export class CatComponent implements OnInit {
   cat!: any;
   img!: string;
+  showDetails:boolean;
   constructor(
     private catService: CatsService,
     private activatedRoute: ActivatedRoute,
@@ -19,17 +20,21 @@ export class CatComponent implements OnInit {
   ngOnInit(): void {
     const identifier: any = this.activatedRoute.snapshot.paramMap.get('id');
 
-    console.log('Identifier -->' + identifier);
+    //console.log('Identifier -->' + identifier);
     this.catService.getCatImageById(identifier).subscribe((cat) => {
       if (!cat) {
         return this.router.navigateByUrl('/');
       }
 
       this.cat = cat;
-      console.log(this.cat.id);
-      console.log(this.cat.breeds[0].description);
-      console.log(this.cat.url);
+      console.log(this.cat);
+      //console.log(this.cat.breeds[0].description);
+      //console.log(this.cat.url);
       return this.router.navigateByUrl('/cat/' + identifier);
     });
+  }
+
+  toggleShow(): void {
+    this.showDetails=true;
   }
 }
