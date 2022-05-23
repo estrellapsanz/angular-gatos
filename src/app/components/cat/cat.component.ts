@@ -10,7 +10,7 @@ import { CatsService } from 'src/app/services/cats.service';
 export class CatComponent implements OnInit {
   cat!: any;
   img!: string;
-  showDetails:boolean;
+  showDetails: boolean;
   constructor(
     private catService: CatsService,
     private activatedRoute: ActivatedRoute,
@@ -27,7 +27,7 @@ export class CatComponent implements OnInit {
       }
 
       this.cat = cat;
-      console.log(this.cat);
+      //console.log(this.cat);
       //console.log(this.cat.breeds[0].description);
       //console.log(this.cat.url);
       return this.router.navigateByUrl('/cat/' + identifier);
@@ -35,6 +35,6 @@ export class CatComponent implements OnInit {
   }
 
   toggleShow(): void {
-    this.showDetails=true;
+    this.showDetails = true;
   }
 }

@@ -34,7 +34,7 @@ export class CatsComponent implements OnInit {
 
   loaded: boolean;
   loading: boolean;
-  //cats: any[] = [];
+
   constructor(private catsService: CatsService) {
     this.loaded = false;
     this.loading = false;
@@ -43,20 +43,6 @@ export class CatsComponent implements OnInit {
   ngOnInit(): void {
     this.loading = true;
     this.loaded = false;
-    /*for (let i = 0; i < 10; i++) {
-      this.catsService.getRandomCat().subscribe((cat) => {
-        this.cats.push(cat);
-      });
-    }*/
-
-    //this.catsService.getPicture().subscribe((pics) => {
-    //this.cats = pics;
-    //console.log(this.cats);
-    //});
-
-    //this.catsService.getFavorites().subscribe((cats) => {
-    //this.cats = cats;
-    //});
 
     this.catsService.getCats().subscribe((cats) => {
       this.cats = cats;

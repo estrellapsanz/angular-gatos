@@ -2,7 +2,6 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs/internal/Observable';
 import { Cat } from '../models/cat.interface';
-import { Image } from '../models/image.interface';
 
 @Injectable({
   providedIn: 'root',
@@ -12,6 +11,7 @@ export class CatsService {
 
   constructor(private http: HttpClient) {}
 
+  /*
   getFavorites(): Observable<Cat[]> {
     const headers = new HttpHeaders({
       'x-api-key': this.api_key,
@@ -38,7 +38,7 @@ export class CatsService {
 
   getImageById(id: string): Observable<Image> {
     return this.http.get<Image>('https://picsum.photos/id/' + id + '/info');
-  }
+  } */
 
   getCats(): Observable<Cat[]> {
     const headers = new HttpHeaders({
