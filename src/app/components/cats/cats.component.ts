@@ -6,6 +6,8 @@ import {
   trigger,
 } from '@angular/animations';
 import { Component, OnInit } from '@angular/core';
+import { ThemePalette } from '@angular/material/core';
+import { ProgressSpinnerMode } from '@angular/material/progress-spinner';
 import { Cat } from 'src/app/models/cat.interface';
 import { CatsService } from 'src/app/services/cats.service';
 
@@ -27,10 +29,20 @@ import { CatsService } from 'src/app/services/cats.service';
 })
 export class CatsComponent implements OnInit {
   cats: Cat[] = [];
+  mode: ProgressSpinnerMode = 'indeterminate';
+  color: ThemePalette = 'primary';
+
+  loaded: boolean;
+  loading: boolean;
   //cats: any[] = [];
-  constructor(private catsService: CatsService) {}
+  constructor(private catsService: CatsService) {
+    this.loaded = false;
+    this.loading = false;
+  }
 
   ngOnInit(): void {
+    this.loading = true;
+    this.loaded = false;
     /*for (let i = 0; i < 10; i++) {
       this.catsService.getRandomCat().subscribe((cat) => {
         this.cats.push(cat);
@@ -48,6 +60,8 @@ export class CatsComponent implements OnInit {
 
     this.catsService.getCats().subscribe((cats) => {
       this.cats = cats;
+      this.loading = false;
+      this.loaded = true;
       console.log(this.cats);
     });
   }

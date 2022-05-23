@@ -28,3 +28,11 @@
     </div>
   </div>
 </div>
+
+<mat-progress-spinner
+  *ngIf="loading && !loaded"
+  id="spinner"
+  [color]="color"
+  [mode]="mode"
+>
+</mat-progress-spinner>

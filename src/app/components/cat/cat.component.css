@@ -1,3 +1,16 @@
 img {
-  max-width: 33%;
+  max-width: 45%;
+}
+
+mat-card-header,
+.cat-img,
+.buttons {
+  justify-content: center;
+  align-items: center;
+}
+mat-card {
+  margin-bottom: 2%;
+}
+button {
+  margin-left: 2%;
 }
