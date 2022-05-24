@@ -38,6 +38,18 @@ export class CatComponent implements OnInit {
 
     this.catService.getCatImageById(identifier).subscribe((cat) => {
       if (!cat) {
+      
+        this.cat.breeds[0].name = 'Isidoro';
+        this.cat.breeds[0].origin = 'Cartoons';
+        this.cat.url = 'assets/default.jpg';
+        this.cat.breeds[0].description = 'The best cartoon of a cat ever seen!';
+        this.cat.breeds[0].temperament =
+          'Lovely and sweet althougt very smart.';
+        this.cat.breeds[0].affection_level = '10';
+        this.cat.breeds[0].wikipedia_url =
+          'https://es.wikipedia.org/wiki/Heathcliff';
+        this.cat.breeds[0].vetstreet_url = 'cat.breeds[0].vetstreet_url';
+        this.cat.breeds[0].child_friendly = 10;
         return this.router.navigateByUrl('/');
       }
 
