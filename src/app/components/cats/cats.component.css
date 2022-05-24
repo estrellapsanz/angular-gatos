@@ -1,7 +1,12 @@
 .mat-card-image {
-  max-width: 80%;
+  max-width: 100%;
+  margin: 0;
 }
 
+h1 {
+  align-text: center;
+  margin: 2% 0% 5% 0%;
+}
 #spinner {
   content: "";
   display: block;
@@ -16,4 +21,17 @@
   border-radius: 50%;
   -webkit-animation: spin 0.8s linear infinite;
   animation: spin 0.8s linear infinite;
+}
+
+mat-card-title {
+  color: blue;
+  font-size: 2rem;
+}
+
+mat-card-subtitle {
+  padding: 2% 0% 2% 0%;
+}
+
+mat-card-content {
+  padding: 6% 0% 2% 0%;
 }
