@@ -7,6 +7,7 @@ mat-card-header,
 .buttons {
   justify-content: center;
   align-items: center;
+  margin-bottom: 2%;
 }
 mat-card {
   margin-bottom: 2%;
@@ -17,4 +18,11 @@ button {
 
 mat-tab-group {
   margin-top: 4%;
+}
+
+mat-card-title {
+  color: blue;
+}
+mat-card-subtitle {
+  text-align: center;
 }
