@@ -20,7 +20,7 @@ import { CatsService } from 'src/app/services/cats.service';
       state(
         'void',
         style({
-          opacity: 0.2,
+          opacity: 0.001,
         })
       ),
       transition('void<=>*', animate(1500)),

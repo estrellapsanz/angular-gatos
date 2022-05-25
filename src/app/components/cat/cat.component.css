@@ -26,3 +26,7 @@ mat-card-title {
 mat-card-subtitle {
   text-align: center;
 }
+
+a {
+  text-decoration: none;
+}
