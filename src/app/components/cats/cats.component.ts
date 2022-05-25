@@ -48,7 +48,6 @@ export class CatsComponent implements OnInit {
       this.cats = cats;
       this.loading = false;
       this.loaded = true;
-      console.log(this.cats);
     });
   }
 }
