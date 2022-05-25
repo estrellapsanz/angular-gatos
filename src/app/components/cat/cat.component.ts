@@ -12,7 +12,6 @@ export class CatComponent implements OnInit {
   cat!: any;
   img!: string;
   showDetails: boolean;
-  default_cat: any;
   loading: boolean;
   loaded: boolean;
 
@@ -46,13 +45,17 @@ export class CatComponent implements OnInit {
         errorResponse = error.error;
         this.loaded = false;
         this.loading = false;
-        console.log(errorResponse);
+        //console.log(errorResponse);
         return this.router.navigateByUrl('/cat/' + identifier);
       }
     );
   }
 
   toggleShow(): void {
-    this.showDetails = true;
+    if (this.showDetails) {
+      this.showDetails = false;
+    } else {
+      this.showDetails = true;
+    }
   }
 }

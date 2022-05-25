@@ -12,7 +12,7 @@
         </a>
 
         <div class="cat-img" fxLayout="column">
-          <img mat-card-image src="{{ cat.url }}" alt="Photo" />
+          <img mat-card-image class="cat" src="{{ cat.url }}" alt="Photo" />
         </div>
 
         <mat-card-content
@@ -67,7 +67,7 @@
         </mat-tab-group>
       </mat-card>
 
-      <div class="buttons" fxLayout="row wrap">
+      <div class="buttons" *ngIf="!showDetails" fxLayout="row wrap">
         <button
           (click)="toggleShow()"
           mat-raised-button
@@ -75,6 +75,17 @@
           type="button"
         >
           Show all details
+        </button>
+      </div>
+
+      <div class="buttons" *ngIf="showDetails" fxLayout="row wrap">
+        <button
+          (click)="toggleShow()"
+          mat-raised-button
+          color="primary"
+          type="button"
+        >
+          Hide all details
         </button>
       </div>
     </div>
