@@ -11,35 +11,7 @@ export class CatsService {
 
   constructor(private http: HttpClient) {}
 
-  /*
-  getFavorites(): Observable<Cat[]> {
-    const headers = new HttpHeaders({
-      'x-api-key': this.api_key,
-      'Content-Type': 'application/json',
-      'Access-Control-Allow-Origin': '*',
-      'Access-Control-Allow-Headers': 'Content-Type',
-      'Access-Control-Allow-Methods': '*',
-      'Cross-Origin': 'true',
-    });
-
-    return this.http.get<Cat[]>(
-      'https://thecatapi.com/v1/images/search?limit=100',
-      { headers }
-    );
-  }
-
-  getRandomCat(): Observable<Cat> {
-    return this.http.get<Cat>('https://api.thecatapi.com/v1/images/search');
-  }
-
-  getPicture(): Observable<any> {
-    return this.http.get<Cat>('https://picsum.photos/v2/list');
-  }
-
-  getImageById(id: string): Observable<Image> {
-    return this.http.get<Image>('https://picsum.photos/id/' + id + '/info');
-  } */
-
+  
   getCats(): Observable<Cat[]> {
     const headers = new HttpHeaders({
       'x-api-key': this.api_key,
