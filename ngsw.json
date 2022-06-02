@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1654192155816,
+  "timestamp": 1654193986527,
   "index": "/angular-gatos/index.html",
   "assetGroups": [
     {
@@ -20,7 +20,8 @@
         "/angular-gatos/styles.f26cdcb57409ceba.css"
       ],
       "patterns": [
-        "https:\\/\\/api\\.thecatapi\\.com\\/v1\\/breeds\\/[^/]*"
+        "https:\\/\\/api\\.thecatapi\\.com\\/v1\\/breeds",
+        "https:\\/\\/api\\.thecatapi\\.com\\/v1\\/images\\/[^/]*"
       ]
     },
     {
@@ -48,10 +49,11 @@
     {
       "name": "images-api",
       "patterns": [
-        "https:\\/\\/api\\.thecatapi\\.com\\/v1\\/breeds[^/]*[^/]*"
+        "https:\\/\\/api\\.thecatapi\\.com\\/v1\\/breeds[^/]*",
+        "https:\\/\\/api\\.thecatapi\\.com\\/v1\\/images\\/[^/]*"
       ],
-      "strategy": "freshness",
-      "maxSize": 10,
+      "strategy": "performance",
+      "maxSize": 20,
       "maxAge": 3600000,
       "timeoutMs": 1000,
       "cacheQueryOptions": {
